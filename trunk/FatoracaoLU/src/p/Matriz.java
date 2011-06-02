@@ -29,4 +29,20 @@ public class Matriz {
 		linhas.set(posX, y);
 		linhas.set(posY, x);
 	}
+
+	public int quantidadeDeLinhas() {
+		return linhas.size();
+	}
+
+	public double getElemento(int i, int j) {
+		return linhas.get(i).getElementos().get(j);
+	}
+
+	public void setElemento(int i, int j, double elemento) {
+		linhas.get(i).getElementos().set(j, elemento);
+	}
+
+	public int quantidadeDeColunas() {
+		return linhas.get(0).tamanho();
+	}
 }

@@ -10,6 +10,13 @@ public class Linha {
 		elementos = new ArrayList<Double>();
 	}
 	
+	public Linha(int quantidadeDeLinhas) {
+		elementos = new ArrayList<Double>();
+		for (int i = 0; i < quantidadeDeLinhas; i++) {
+			elementos.add((double) 0);
+		}
+	}
+
 	public void adicionarElemento(Double i) {
 		elementos.add(i);
 	}
@@ -36,6 +43,14 @@ public class Linha {
 		
 		elementos.set(posX, y);
 		elementos.set(posY, x);
+	}
+
+	public double getElemento(int i) {
+		return elementos.get(i);
+	}
+	
+	public double setElemento(double elemento, int posicao) {
+		return elementos.set(posicao, elemento);
 	}
 
 }

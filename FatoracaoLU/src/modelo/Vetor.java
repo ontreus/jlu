@@ -1,18 +1,18 @@
-package p;
+package modelo;
 
 import java.util.ArrayList;
 
-public class Linha {
+public class Vetor {
 
 	private ArrayList<Double> elementos;
 	
-	public Linha() {
+	public Vetor() {
 		elementos = new ArrayList<Double>();
 	}
 	
-	public Linha(int quantidadeDeLinhas) {
+	public Vetor(int quantidadeDeElementos) {
 		elementos = new ArrayList<Double>();
-		for (int i = 0; i < quantidadeDeLinhas; i++) {
+		for (int i = 0; i < quantidadeDeElementos; i++) {
 			elementos.add((double) 0);
 		}
 	}
@@ -23,14 +23,6 @@ public class Linha {
 
 	public void adicionarElemento(int i) {
 		elementos.add((double) i);
-	}
-
-	public void setElementos(ArrayList<Double> elementos) {
-		this.elementos = elementos;
-	}
-
-	public ArrayList<Double> getElementos() {
-		return elementos;
 	}
 
 	public int tamanho() {
@@ -49,8 +41,8 @@ public class Linha {
 		return elementos.get(i);
 	}
 	
-	public double setElemento(double elemento, int posicao) {
-		return elementos.set(posicao, elemento);
+	public void setElemento(int posicao, double elemento) {
+		elementos.set(posicao, elemento);
 	}
 
 }

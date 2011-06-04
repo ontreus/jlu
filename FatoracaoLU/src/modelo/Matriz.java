@@ -37,4 +37,9 @@ public class Matriz {
 	public void setElemento(int i, int j, double elemento) {
 		linhas.get(i).setElemento(j, elemento);
 	}
+
+	public void adicionarLinha() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -1,5 +1,6 @@
 package lu;
 
+import saida.Saida;
 import modelo.Matriz;
 import modelo.Vetor;
 
@@ -120,13 +121,7 @@ public class FatoracaoLU {
 	private Vetor resolverSistemaTriangularSuperior(Matriz matriz, Vetor vetor) {
 		Vetor solucao = new Vetor(vetor.tamanho());
 
-		double ultimoDaMatriz = matriz.getElemento(matriz.quantidadeDeLinhas() - 1,
-				matriz.quantidadeDeColunas() - 1);
-		double ultimoDoVetor = vetor.getElemento(vetor.tamanho() - 1);
-		
-		solucao.setElemento(solucao.tamanho() - 1, ultimoDoVetor / ultimoDaMatriz);
-
-		for (int k = vetor.tamanho() - 2; k >= 0; k--) {
+		for (int k = vetor.tamanho() - 1; k >= 0; k--) {
 			double soma = 0;
 			for (int j = k + 1; j < vetor.tamanho(); j++) {
 				soma += matriz.getElemento(k, j) * solucao.getElemento(j);
@@ -140,9 +135,7 @@ public class FatoracaoLU {
 	private static Vetor resolverSistemaTriangularInferior(Matriz matriz, Vetor vetor) {
 		Vetor solucao = new Vetor(vetor.tamanho());
 
-		solucao.setElemento(0, vetor.getElemento(0) / matriz.getElemento(0, 0));
-
-		for (int i = 1; i < vetor.tamanho(); i++) {
+		for (int i = 0; i < vetor.tamanho(); i++) {
 			double soma = 0;
 			for (int j = 0; j < i; j++) {
 				soma += matriz.getElemento(i, j) * solucao.getElemento(j);

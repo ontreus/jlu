@@ -2,12 +2,11 @@ package lu;
 
 import modelo.Vetor;
 import saida.Saida;
-import dataset.FatoracaoLUDataset;
 
 public class Main {
 
 	public static void main(String[] args) {
-		FatoracaoLUDataset ds = new FatoracaoLUDataset();
+		DataSet ds = new DataSet();
 		Saida saida = new Saida();
 		
 		saida.imprimirMatriz(ds.matrizA);

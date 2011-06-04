@@ -1,14 +1,14 @@
-package dataset;
+package lu;
 
 import modelo.Matriz;
 import modelo.Vetor;
 
-public class FatoracaoLUDataset {
+public class DataSet {
 	
 	public Matriz matrizA;
 	public Vetor vetorB;
 	
-	public FatoracaoLUDataset() {
+	public DataSet() {
 		matrizA = new Matriz();
 		
 		Vetor linha1, linha2, linha3;

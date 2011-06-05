@@ -1,4 +1,4 @@
-package quadmin;
+package quadmin.linear;
 
 import lu.FatoracaoLU;
 import saida.Saida;
@@ -6,9 +6,9 @@ import saida.Saida;
 public class Main {
 
 	public static void main(String[] args) {
-		DataSet ds = new DataSet();
+		DataSetLinear ds = new DataSetLinear();
 		
-		new QuadradosMinimos().montarMatriz(ds);
+		new QuadradosMinimosLinear().montarMatriz(ds);
 		
 		new Saida().imprimirVetor(new FatoracaoLU(ds.matriz, ds.vetor, true).resolver());
 	}

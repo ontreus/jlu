@@ -1,19 +1,19 @@
-package quadmin;
+package quadmin.linear;
 
 import java.util.ArrayList;
 
 import modelo.Matriz;
 import modelo.Vetor;
 
-public class DataSet {
+public class DataSetLinear {
 	
-	Matriz matriz;
-	Vetor vetor;
-	Tabela tabela;
-	int quantidadeDeEquacoes;
-	int set;
+	public Matriz matriz;
+	public Vetor vetor;
+	public Tabela tabela;
+	public int quantidadeDeEquacoes;
+	public boolean isLinear;
 	
-	public DataSet() {
+	public DataSetLinear() {
 		matriz = new Matriz();
 		vetor = new Vetor();
 		tabela = new Tabela();
@@ -32,7 +32,7 @@ public class DataSet {
 		
 		quantidadeDeEquacoes = 1;
 		
-		set = 0;
+		isLinear = true;
 	}
 	
 	public double g(double x, int f) {
@@ -51,7 +51,7 @@ public class DataSet {
 		return tabela.tamanho();
 	}
 	
-	private class Tabela {
+	protected class Tabela {
 		ArrayList<Double> pontos, valores;
 		
 		public Tabela() {

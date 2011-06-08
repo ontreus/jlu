@@ -4,7 +4,7 @@ import modelo.Vetor;
 
 public class QuadradosMinimosNaoLinear {
 
-	public void montarMatriz(DataSetNaoLinear ds) {
+	public void montarSistema(DataSetNaoLinear ds) {
 		for (int i = 0; i < ds.quantidadeDeEquacoes; i++) {
 			Vetor linha = new Vetor();
 			for (int j = 0; j < ds.quantidadeDeEquacoes; j++) {
@@ -21,7 +21,7 @@ public class QuadradosMinimosNaoLinear {
 			// Calculo b[i]
 			double soma = 0;
 			for (int k = 0; k < ds.quantidadeDePontos(); k++) {
-				soma += ds.z(ds.ponto(k)) * ds.g(ds.ponto(k), i);				
+				soma += ds.z(ds.ponto(k)) * ds.g(ds.ponto(k), i);
 			}
 			ds.vetor.adicionarElemento(soma);
 		}

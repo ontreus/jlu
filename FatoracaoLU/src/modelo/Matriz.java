@@ -9,6 +9,16 @@ public class Matriz {
 		linhas = new ArrayList<Vetor>();
 	}
 	
+	public Matriz(Double[][] pd) {
+		for (int i = 0; i < pd.length; i++) {
+			Vetor linha = new Vetor();
+			for (int j = 0; j < pd[0].length; j++) {
+				linha.adicionarElemento(pd[i][j]);
+			}
+			linhas.add(linha);
+		}
+	}
+
 	public void adicionarLinha(Vetor linha)
 	{
 		linhas.add(linha);

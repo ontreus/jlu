@@ -1,8 +1,7 @@
 package quadmin.linear;
 
-import java.util.ArrayList;
-
 import modelo.Matriz;
+import modelo.Tabela;
 import modelo.Vetor;
 
 public class DataSetLinear {
@@ -11,7 +10,6 @@ public class DataSetLinear {
 	public Vetor vetor;
 	public Tabela tabela;
 	public int quantidadeDeEquacoes;
-	public boolean isLinear;
 	
 	public DataSetLinear() {
 		matriz = new Matriz();
@@ -31,8 +29,6 @@ public class DataSetLinear {
 		tabela.adicionar(1.0, 2.05);
 		
 		quantidadeDeEquacoes = 1;
-		
-		isLinear = true;
 	}
 	
 	public double g(double x, int f) {
@@ -49,34 +45,6 @@ public class DataSetLinear {
 
 	public int quantidadeDePontos() {
 		return tabela.tamanho();
-	}
-	
-	protected class Tabela {
-		ArrayList<Double> pontos, valores;
-		
-		public Tabela() {
-			pontos = new ArrayList<Double>();
-			valores = new ArrayList<Double>();
-		}
-		
-		public double valorDeX(double ponto) {
-			for (int i = 0; i < pontos.size(); i++) {
-				if (pontos.get(i) == ponto) {
-					return valores.get(i);
-				}
-			}
-			
-			return 0;
-		}
-		
-		public void adicionar(double ponto, double valor) {
-			pontos.add(ponto);
-			valores.add(valor);
-		}
-
-		public int tamanho() {
-			return pontos.size();
-		}
 	}
 	
 }

@@ -10,7 +10,7 @@ public class Main {
 		DataSetNaoLinear ds = new DataSetNaoLinear();
 		QuadradosMinimosNaoLinear qmnl = new QuadradosMinimosNaoLinear();
 		
-		qmnl.montarMatriz(ds);
+		qmnl.montarSistema(ds);
 		Vetor a = new FatoracaoLU(ds.matriz, ds.vetor, true).resolver();
 		
 		new Saida().imprimirVetor(qmnl.obterAlphas(a));

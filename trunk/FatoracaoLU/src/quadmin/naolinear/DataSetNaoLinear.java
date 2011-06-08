@@ -1,6 +1,7 @@
 package quadmin.naolinear;
 
 import modelo.Matriz;
+import modelo.Tabela;
 import modelo.Vetor;
 import quadmin.linear.DataSetLinear;
 
@@ -21,8 +22,6 @@ public class DataSetNaoLinear extends DataSetLinear {
 		tabela.adicionar(1.0, 0.246);
 		
 		quantidadeDeEquacoes = 2;
-		
-		isLinear = false;
 	}
 	
 	public double g(double x, int f) {

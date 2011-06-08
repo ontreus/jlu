@@ -1,6 +1,5 @@
 package lu;
 
-import saida.Saida;
 import modelo.Matriz;
 import modelo.Vetor;
 

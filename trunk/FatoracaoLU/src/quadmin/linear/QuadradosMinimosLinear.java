@@ -4,7 +4,7 @@ import modelo.Vetor;
 
 public class QuadradosMinimosLinear {
 
-	public void montarMatriz(DataSetLinear ds) {
+	public void montarSistema(DataSetLinear ds) {
 		for (int i = 0; i < ds.quantidadeDeEquacoes; i++) {
 			Vetor linha = new Vetor();
 			for (int j = 0; j < ds.quantidadeDeEquacoes; j++) {
